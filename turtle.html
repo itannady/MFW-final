@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/turtle.css" />
+    <!--Icon stylesheet-->
+    <script src="https://kit.fontawesome.com/fe46daf58d.js" crossorigin="anonymous"></script>
+    <title>Sea Turtles</title>
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top m-2">
+      <div class="container">
+        <a class="logo navbar-brand" href="index.html">AR.</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav ms-auto mt-3">
+             <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                ANIMALS
+              </a>
+              <ul class="dropdown-menu bg-light border-0 " aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="tiger.html">TIGER</a></li>
+                <li><a class="dropdown-item" href="elephant.html">ELEPHANT</a></li>
+                <li><a class="dropdown-item" href="turtle.html">SEA TURTLE</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#about_section">ABOUT</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">CONTACT</a>
+            </li>
+          
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Parallax Jumbotron -->
+    <section id="parallax">
+      <img src="../img/turtle_bg.png" id="turtle_bg" />
+      <img src="../img/turtle_ground.png" id="turtle_ground" />
+      <h1 id="subtext">SEA</h1>
+      <img src="../img/turtle.png" id="turtle" />
+      <h1 id="text">TURTLES</h1>
+    </section>
+    <!-- Parallax Jumbotron End -->
+
+<!-- Facts Section  -->
+    <section class="info">
+      <div class="turtle_cutout">
+        <img src="../img/turtle_cutout.png" id="turtle_cutout">
+      </div>
+      <div class="text-container">
+        <h3>SEA</h3>
+        <h2>Turtles</h2>
+        <p>
+         There are seven species of sea turtles all ranging in different sizes and shapes. Although their vision is better underwater, they prefer to be close to the land. Females come to the shore when it's time to lay their eggs and just like other reptiles, the sex of sea turtles depend on the temperature of their nest (sand). Baby turtles will hatch in about 60 days where they find their way to the ocean through cues such as light from the ocean horizon or the slope of the beach. 
+        </p>
+        <div class="stats">
+        <div class="left-stats-col">
+          <h6>Status</h6>
+            <p>Endangered</p>
+            <h6>Population</h6>
+            <p>6.5 million (for all 7 species)</p>
+            <h6>Habitat</h6>
+            <p>Open water and coasts</p>
+          </div>
+          <div class="right-stats-col">
+            <h6>Length</h6>
+            <p>2-6 feet</p>
+            <h6>Weight</h6>
+            <p>240-420 pounds</p>
+            <h6>Poached</h6>
+            <p>80,000 a year</p>
+          </div>
+        </div>
+      </div>
+      
+    </section>
+    <!-- Facts Section End -->
+
+    <!-- Threats Section -->
+    <section class="container-fluid threats">
+      <div class="threats-text-container">
+        <h2>Threats</h2>
+        <p>
+         Six out of the seven species of sea turtles are endangered. Thousands of turtle hatchlings are born each year along the Southeast Coast of the U.S. but only 1 in 1,000 to 10,000 will survive and become adults. Amongst natural obstacles, sea turtles are endangered primarily because of human threats such as poaching and habitat destruction.  
+        </p>
+      </div>
+      <div class="card-container row d-flex justify-content-around">
+        <div class="card">
+          <img src="../img/fishing.jpg" class="img-fluid" alt="elephant tusk" />
+          <div class="content">
+            <h4>Poachers</h4>
+            <p>
+             Thousands of sea turtles are slaughtered for their eggs, meat, skin, and shells in return for income. Bycatch (accidental capture) is also a top cause for deaths of sea turtles in the U.S., amounting to about 4,600 deaths a year.
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="../img/beach-development.jpg" class="img-fluid" alt="elephant tusk" />
+          <div class="content">
+            <h4>Habitat Destruction</h4>
+            <p>
+              Human activity and development in beaches disrupt turtle nesting and hatchlings. Coral reefs, which are the main feeding ground, also gets destroyed through activities like sedimentation.
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="../img/pollution.jpg" class="img-fluid" alt="elephant tusk" />
+          <div class="content">
+            <h4>Climate Change and Pollution</h4>
+            <p>
+              The rising sea levels and temperature also causes damage to nesting and foraging grounds. Plastic bags are mistaken for jelly fish and gets consumed by sea turtles which eventually kills them. 
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Threats Section End -->
+
+    <!--Video banner section starts-->
+    <section class="overlay">
+      <video autoplay muted loop>
+        <source src="../img/turtle-vid.mp4" alt="Sea turtle swimming" />
+      </video>
+    </section>
+    <!-- Video banner section ends -->
+
+    <!-- What We Can Do Section -->
+    <section class="container-fluid action-plan">
+      <h2>What We Can Do</h2>
+      <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-overlay carousel-item active">
+            <img src="../img/turtle-carousel1.jpg" class="d-block w-100" alt="..." >
+            <div class="carousel-caption d-none d-md-block d-sm-block" >
+              <h5>Raise Awareness</h5>
+              <p>Support organizations like the World Wildlife Fund that raise awareness and help communities develop opportunities where they do not need to depend on turtle harvesting for income.  </p>
+            </div>
+          </div>
+          <div class="carousel-overlay carousel-item">
+            <img src="../img/turtle-carousel2.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block d-sm-block">
+              <h5>Turtle-Friendly Choices</h5>
+              <p>Support turtle-friendly tourism by looking for vacation establishments that are proactive about protecting turtle nests on their beaches. </p>
+            </div>
+          </div>
+          <div class="carousel-overlay carousel-item">
+            <img src="../img/turtle-carousel3.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block d-sm-block">
+              <h5>Limit Sea Pollution</h5>
+              <p>Recycle and reduce single-use plastic when you can by refusing unneeded single-use plastic or bringing reusable versions of the product, such as grocery bags, coffee cups, straws, etc. </p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+    </section>
+    <!-- What We Can Do Section End -->
+  
+    <!-- Footer -->
+    <footer class="container-fluid">
+      <div class="col-wrapper">
+        <div class="left-col">
+        <a href="index.html"><h5 class="logo">AR.</h5></a>
+        <ul>
+          <li><a href="#">ANIMALS</a></li>
+          <li><a href="index.html#about_section">ABOUT</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+       
+      </div>
+      <div class="right-col">
+        <h5>Keep up with the latest news</h5>
+        <label for="Subscribe">Subscribe</label>
+        <div class="subscribe-email-btn-wrap">
+          <input type="email" id="email-field" placeholder="Email Address" />
+          <button class="submit-btn">
+            <i class="fas fa-long-arrow-alt-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="bottom-wrapper">
+      <span class="copyright" aria-hidden="true">© 2022 Isabella Tannady Designs</span>
+      <div class="social-icons">
+        <i class="fa fa-brands fa-instagram"></i>
+        <i class="fa fa-brands fa-twitter"></i>
+        <i class="fa fa-brands fa-youtube"></i>
+        <i class="fa fa-brands fa-facebook-square"></i>
+        </div>
+     </div>
+    </footer>
+    <!-- Footer End -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Parallax Script -->
+    <script>
+      let turtle_bg = document.getElementById("turtle_bg");
+      let turtle_ground = document.getElementById("turtle_ground");
+      let subtext = document.getElementById("subtext");
+      let turtle = document.getElementById("turtle");
+      let text = document.getElementById("text");
+
+      
+      let tiger_alone= document.getElementById("turtle_cutout");
+
+      window.addEventListener("scroll", function () {
+        let scroll = window.scrollY;
+        turtle_bg.style.top = scroll * 0.2 + "px";
+        turtle_ground.style.transform = `translate3d(0, ${scroll * 0.25}px, 0)`;
+        subtext.style.top = scroll * 1.5 + "px";
+        turtle.style.transform = `translate3d(0, ${
+          scroll * .4
+        }px, 0)`;
+        text.style.top = scroll * 1 + "px";
+        
+        
+        turtle_cutout.style.transform = `translate3d(${scroll * 0.08}px, 0, 0)`;
+      });
+    </script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>

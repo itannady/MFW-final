@@ -4,9 +4,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
   font-family: poppins;
   color: white;
-  scroll-behavior: smooth;
 }
 
 body {
@@ -20,6 +20,18 @@ nav {
   left: 0;
   width: 100%;
   z-index: 100000;
+  font-weight: bold;
+}
+
+.logo {
+  font-family: poppins;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.nav-link {
+  display: flex;
+  justify-content: flex-end;
 }
 
 /* Jumbotron */
@@ -39,8 +51,8 @@ nav {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 100px;
-  background: linear-gradient(to top, #955421, transparent);
+  height: 150px;
+  background: linear-gradient(to top, #22251e, transparent);
   z-index: 1000;
 }
 
@@ -53,84 +65,91 @@ nav {
   object-fit: cover;
 }
 
-
 #text {
   position: absolute;
-  color: white;
   font-size: 9rem;
   font-weight: 700;
-  padding-top: 15vh;
+  padding-top: 10%;
+  text-align: center;
 }
 
 /* Facts Section */
-
 .info {
   position: relative;
-  background: rgb(149, 84, 33);
+  display: flex;
+  justify-content: space-between;
+  background: rgba(61, 70, 49, 0.94);
   background: linear-gradient(
     180deg,
-    rgba(149, 84, 33, 1) 0%,
-    rgba(146, 112, 86, 1) 9%,
-    rgba(144, 129, 118, 1) 19%,
-    rgba(143, 143, 143, 1) 33%
+    #22251e 0%,
+    #2f3428 9%,
+    #3c4531 19%,
+    rgba(61, 70, 49, 0.94) 33%
   );
-  height: 110vh;
-  display: flex;
-  
 }
 
 .text-container {
-  padding-left: 8%;
+  padding-right: 5%;
+  padding-left: 5%;
   padding-top: 10%;
-  
+  width: 50%;
 }
 
 h2 {
   font-family: abril fatface;
   font-size: 4rem;
+  padding-bottom: 2%;
 }
 
-.info h3 {
+.text-container h3 {
   font-weight: 200;
   font-size: 1.5rem;
-  line-height: 0.5;
 }
 
-.info p {
-  line-height: 1.6;
+.stats {
+  display: flex;
 }
 
-.stats h6 {
+h6 {
   font-family: abril fatface;
 }
 
-.elephant_cutout {
-  width: 55%;
-  height: 100%;
-  background: url(/img/elephant_cutout.png);
-  background-position: left 50% bottom 65%;
-  background-repeat: no-repeat;
-  background-size: cover;
+.left-stats-col {
+  margin-top: 3%;
+  margin-right: 20%;
+}
+
+.right-stats-col {
+  margin-top: 3%;
+}
+.tiger_cutout {
+  padding-top: 5%;
   overflow-x: hidden;
 }
 
-.threats {
-  position: relative;
-  background: rgb(141, 141, 141);
-  background: linear-gradient(
-    180deg,
-    rgba(141, 141, 141, 1) 37%,
-    rgba(92, 92, 92, 1) 51%,
-    rgba(57, 57, 57, 1) 65%,
-    rgba(37, 37, 37, 1) 73%,
-    rgba(6, 6, 6, 1) 83%,
-    rgba(6, 6, 6, 1) 90%,
-    rgba(6, 6, 6, 1) 97%
-  );
-  height: 130vh;
-
+.tiger_cutout img {
+  position: absolute;
+  width: 55%;
+  object-fit: contain;
+  overflow-x: hidden;
+  left: -130px;
 }
 
+/* Threats Section */
+.threats {
+  position: relative;
+  background: #48503d;
+  background: linear-gradient(
+    180deg,
+    #48503d 20%,
+    #363d2c 31%,
+    #303629 45%,
+    #272b22 53%,
+    #22251e 63%,
+    #1d1f1b 70%,
+    rgba(6, 6, 6, 1) 85%
+  );
+}
 
 .threats-text-container {
   padding-top: 8%;
@@ -145,15 +164,18 @@ h2 {
   line-height: 1.6;
 }
 
+.card-container {
+  padding-bottom: 8%;
+}
+
 .card {
+  position: relative;
   width: 300px;
   height: 400px;
+  display: flex;
   background: none;
-  position: relative;
   border-radius: 20px;
   border: none;
-  display: flex;
-  /* box-shadow: 0 0 20px rgba(0,0,0,0.123); */
 }
 
 .card img {
@@ -169,12 +191,11 @@ h2 {
   bottom: 0;
   height: 50px;
   padding: 0.4em 1.5em;
-  font-size: 16px;
-  background: rgba(255, 255, 255, 0);
+  background: rgba(48, 38, 38, 0.377);
   backdrop-filter: blur(10px);
   border-radius: 10px;
+  font-size: 16px;
   transform: scale(1);
-  color: white;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.144);
   overflow: hidden;
   transition: all 0.4s;
@@ -182,16 +203,18 @@ h2 {
 
 .content p {
   font-size: 0.8em;
+  line-height: 1.6;
 }
 
 .card:hover .content {
-  height: 150px;
+  height: 200px;
 }
 
 .card h4 {
   font-family: abril fatface;
-
 }
+
+/* Video */
 .overlay {
   position: relative;
   width: 100%;
@@ -201,81 +224,256 @@ video {
   width: 100vw;
   height: 45vh;
   object-fit: cover;
-}
 
+}
 
 .overlay::before {
   content: "";
   position: absolute;
   width: 100%;
-  height: 100px;
-  background: linear-gradient(to bottom, #060606, transparent);
-  z-index: 1000;
+  height: 250px;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
+  background: linear-gradient(to bottom, #060606, transparent);
+  z-index: 1000;
 }
 
 /* What We Can Do Section */
-
 .action-plan h2 {
   padding-top: 8%;
   padding-bottom: 5%;
-  font-family: abril fatface;
-  color: #1F1F1F;
   width: 100%;
   text-align: center;
-  
+  font-family: abril fatface;
+  color: #1f1f1f;
+  font-size: 4rem;
 }
 
-.action-plan p {
-  color: black;
+.action-plan {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.carousel {
+  width: 80%;
+}
+
+.carousel-caption {
+  z-index: 2;
+  text-align: left;
+}
+
+.carousel-overlay::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 180px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: black;
+  opacity: 0.5;
+  z-index: 1;
+}
+
+h5 {
+  font-family: abril fatface;
 }
 
 /* Footer */
 footer {
-  height: 40vh;
-  background-color: #1F1F1F;
+  background-color: #1f1f1f;
   margin-top: 10%;
 }
 
+.col-wrapper {
+  display: flex;
+  justify-content: space-around;
+  margin: 2%;
+  padding-top: 5%;
+}
+
 footer ul {
+  padding-left: 0;
+  padding-top: 2%;
   list-style-type: none;
 }
 
 footer a {
   text-decoration: none;
   color: white;
-  
 }
 
-footer h5{
+footer a:hover {
+  text-decoration: underline;
+  color: white;
+}
+
+footer h5 {
   font-family: abril fatface;
   font-size: 1.5rem;
 }
 
-footer label{
-  padding-top: 2%;
-  
-}
-input {
-  background: transparent;
-  border: none;
-  border-bottom: 2px solid #FFFF;
-  width: 300px;
- 
+footer label {
+  padding-top: 5%;
 }
 
-.submit-btn{
+input {
+  width: 300px;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #ffff;
+}
+
+.submit-btn {
   background-color: transparent;
   border: none;
   font-size: 1.5rem;
-  transition: transform .2s;
-  
+  transition: transform 0.2s;
 }
 
 .submit-btn:hover {
   cursor: pointer;
-  transform: scale(1.5); 
+  transform: scale(1.5);
+}
+
+.copyright {
+  padding-right: 3%;
+  display: flex;
+  align-items: flex-end;
+  font-size: 10px;
+}
+
+.social-icons i {
+  font-size: 2rem;
+  padding: 3px;
+}
+
+.bottom-wrapper {
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 2%;
+}
+
+/* Media Queries */
+@media (max-width: 480px) {
+  /* Navbar */
+  .navbar {
+    margin: 5%;
+  }
+  /* Parallax Jumbotron */
+  #subtext {
+    padding-top: 10vh;
+    text-align: center;
+    font-size: 3rem;
+  }
+  #text {
+    position: absolute;
+    color: white;
+    font-size: 4rem;
+    font-weight: 700;
+    padding-top: 70vh;
+  }
+  /* Facts  */
+  .elephant_cutout img {
+    padding-top: 50%;
+    overflow-x: hidden;
+  }
+  /* Threats */
+  .card {
+    margin-bottom: 8%;
+  }
+  .col-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  /* Footer */
+  .left-col {
+    padding-bottom: 5%;
+    padding-top: 5%;
+  }
+  .right-col {
+    padding-bottom: 5%;
+  }
+}
+
+@media (max-width: 780px) {
+  /* Navbar */
+  .dropdown-menu {
+    margin-left: 80%;
+  }
+  /* Parallax Jumbotron */
+  #subtext {
+    padding-top: 10vh;
+    text-align: center;
+    font-size: 4rem;
+  }
+  #text {
+    position: absolute;
+    color: white;
+    font-size: 8rem;
+    font-weight: 700;
+    padding-top: 70vh;
+  }
+  /* Facts */
+  .elephant_cutout img {
+    padding-top: 10%;
+    width: 80%;
+  }
+  /* Threats */
+  .threats-text-container p {
+    width: 60%;
+    line-height: 1.6;
+  }
+  .card {
+    margin-bottom: 5%;
+  }
+}
+
+@media (max-width: 990px) {
+  /* Navbar */
+  .dropdown-menu {
+    margin-left: 80%;
+  }
+  /* Threats */
+  .card {
+    margin-right: 1%;
+    margin-bottom: 3%;
+  }
+}
+
+@media (min-width: 1285px) {
+  /* Tiger Cutout - Facts Section */
+  .tiger_cutout {
+    padding-top: 5%;
+    overflow-x: hidden;
+  }
+  
+  .tiger_cutout img {
+    position: absolute;
+    width: 50%;
+    object-fit: contain;
+    overflow-x: hidden;
+    left: -100;
+}
+
+@media (min-width: 1400px) {
+  /* Turtle Cutout - Facts Section */
+  .tiger_cutout {
+    padding-top: 5%;
+    overflow-x: hidden;
+  }
+  
+  .tiger_cutout img {
+    position: absolute;
+    width: 45%;
+    object-fit: contain;
+    overflow-x: hidden;
+    left: -100px;
+  }
+}
+
 }

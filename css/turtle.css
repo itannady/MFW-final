@@ -1,0 +1,557 @@
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: poppins;
+  color: white;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* Navbar */
+nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100000;
+  font-weight: bold;
+}
+
+
+.logo {
+  font-family: poppins;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.nav-link {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Jumbotron */
+#parallax {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  padding: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+#parallax::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 150px;
+  background: linear-gradient(to top, #598774, transparent);
+  z-index: 1000;
+}
+
+#parallax img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  
+}
+
+
+#subtext {
+    position: absolute;
+    width: 100%;
+    padding-top: 6%;
+  
+    font-size: 9rem;
+    font-weight: 700;
+    text-align: center
+  
+    
+  }
+
+#text {
+  position: absolute;
+  padding-top: 35%; 
+  width: 100%;
+  font-size: 9rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* Facts Section */
+.info {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  background: 598774;
+  background: linear-gradient(
+    180deg,
+    #598774 0%,
+    #267686 9%,
+    #135663 19%,
+    #063A44 33%
+  );
+}
+
+.text-container {
+  padding-right: 5%;
+  padding-left: 5%;
+  padding-top: 10%;
+  width: 50%;
+}
+
+h2 {
+  font-family: abril fatface;
+  font-size: 4rem;
+  padding-bottom: 2%;
+}
+
+.text-container h3 {
+  font-weight: 200;
+  font-size: 1.5rem;
+  line-height: 0;
+}
+
+.stats {
+  display: flex;
+}
+
+h6 {
+  font-family: abril fatface;
+}
+
+.left-stats-col {
+  margin-top: 3%;
+  margin-right: 20%;
+}
+
+.right-stats-col {
+  margin-top: 3%;
+}
+
+.turtle_cutout {
+  padding-top: 5%;
+  overflow-x: hidden;
+}
+
+.turtle_cutout img {
+  position: absolute;
+  width: 70%;
+  object-fit: contain;
+  overflow-x: hidden;
+  left: -300px;
+}
+
+/* Threats Section */
+.threats {
+  position: relative;
+  background: #48503d;
+  background: linear-gradient(
+    180deg,
+    #063A44 20%,
+    #032d35 31%,
+    #022025 45%,
+    #022025 53%,
+    #022025 63%,
+    #022025 70%,
+    rgba(6, 6, 6, 1) 85%
+  );
+}
+
+.threats-text-container {
+  padding-top: 8%;
+  padding-bottom: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.threats-text-container p {
+  width: 50%;
+  line-height: 1.6;
+}
+
+.card-container {
+  padding-bottom: 8%;
+}
+
+.card {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  display: flex;
+  background: none;
+  border-radius: 20px;
+  border: none;
+}
+
+.card img {
+  position: absolute;
+  width: 300px;
+  height: 400px;
+  border-radius: 10px;
+}
+
+.content {
+  position: absolute;
+  width: 300px;
+  bottom: 0;
+  height: 50px;
+  padding: 0.4em 1.5em;
+  background: rgba(48, 38, 38, 0.377);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  font-size: 16px;
+  transform: scale(1);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.144);
+  overflow: hidden;
+  transition: all 0.4s;
+}
+
+.content p {
+  font-size: 0.8em;
+  line-height: 1.6;
+}
+
+.card:hover .content {
+  height: 200px;
+}
+
+.card h4 {
+  font-family: abril fatface;
+}
+
+/* Video */
+.overlay {
+  position: relative;
+  width: 100%;
+}
+
+video {
+  width: 100vw;
+  height: 45vh;
+  object-fit: cover;
+
+}
+
+.overlay::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 250px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to bottom, #060606, transparent);
+  z-index: 1000;
+}
+
+/* What We Can Do Section */
+.action-plan h2 {
+  padding-top: 8%;
+  padding-bottom: 5%;
+  width: 100%;
+  text-align: center;
+  font-family: abril fatface;
+  color: #1f1f1f;
+  font-size: 4rem;
+}
+
+.action-plan {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.carousel {
+  width: 80%;
+}
+
+.carousel-caption {
+  z-index: 2;
+  text-align: left;
+}
+
+.carousel-overlay::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 180px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: black;
+  opacity: 0.5;
+  z-index: 1;
+}
+
+h5 {
+  font-family: abril fatface;
+}
+
+/* Footer */
+footer {
+  background-color: #1f1f1f;
+  margin-top: 10%;
+}
+
+.col-wrapper {
+  display: flex;
+  justify-content: space-around;
+  margin: 2%;
+  padding-top: 5%;
+}
+
+footer ul {
+  padding-left: 0;
+  padding-top: 2%;
+  list-style-type: none;
+}
+
+footer a {
+  text-decoration: none;
+  color: white;
+}
+
+footer a:hover {
+  text-decoration: underline;
+  color: white;
+}
+
+footer h5 {
+  font-family: abril fatface;
+  font-size: 1.5rem;
+}
+
+footer label {
+  padding-top: 5%;
+}
+
+input {
+  width: 300px;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #ffff;
+}
+
+.submit-btn {
+  background-color: transparent;
+  border: none;
+  font-size: 1.5rem;
+  transition: transform 0.2s;
+}
+
+.submit-btn:hover {
+  cursor: pointer;
+  transform: scale(1.5);
+}
+
+.copyright {
+  padding-right: 3%;
+  display: flex;
+  align-items: flex-end;
+  font-size: 10px;
+}
+
+.social-icons i {
+  font-size: 2rem;
+  padding: 3px;
+}
+
+.bottom-wrapper {
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 2%;
+}
+
+/* Media Queries */
+@media (max-width: 480px) {
+  /* Navbar */
+  .navbar {
+    margin: 5%;
+  }
+  /* Parallax Jumbotron */
+  #subtext {
+    padding-top: 10vh;
+    padding-left: 0%;
+    text-align: center;
+    font-size: 3rem;
+  }
+  #text {
+    position: absolute;
+    color: white;
+    font-size: 4rem;
+    font-weight: 700;
+    padding-top: 70vh;
+  }
+  /* Facts  */
+  .elephant_cutout img {
+    padding-top: 50%;
+    overflow-x: hidden;
+  }
+  /* Threats */
+  .card {
+    margin-bottom: 8%;
+  }
+
+  /* Footer */  
+  
+  .col-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .left-col {
+    padding-bottom: 5%;
+    padding-top: 5%;
+  }
+  .right-col {
+    padding-bottom: 5%;
+  }
+}
+
+@media (max-width: 780px) {
+  /* Navbar */
+  .dropdown-menu {
+    margin-left: 80%;
+  }
+  /* Parallax Jumbotron */
+  #subtext {
+    padding-top: 10vh;
+    text-align: center;
+    font-size: 6rem;
+  }
+  #text {
+    position: absolute;
+    color: white;
+    font-size: 6rem;
+    font-weight: 700;
+    padding-top: 70vh;
+    text-align: center;
+  }
+  /* Facts */
+  .elephant_cutout img {
+    padding-top: 10%;
+    width: 80%;
+  }
+  /* Threats */
+  .threats-text-container p {
+    width: 60%;
+    line-height: 1.6;
+  }
+  .card {
+    margin-bottom: 5%;
+  }
+}
+
+@media (max-width: 990px) {
+
+   /* Parallax Jumbotron */
+   #subtext {
+    padding-top: 10vh;
+    text-align: center;
+    font-size: 9rem;
+  }
+  #text {
+    position: absolute;
+    color: white;
+    font-size: 9rem;
+    font-weight: 700;
+    padding-top: 60vh;
+
+  }
+  /* Navbar */
+  .dropdown-menu {
+    margin-left: 80%;
+  }
+  /* Threats */
+  .card {
+    margin-right: 1%;
+    margin-bottom: 3%;
+  }
+}
+
+@media (max-width: 1225px) {
+  #text {
+    position: absolute;
+    color: white;
+    font-size: 9rem;
+    font-weight: 700;
+    padding-top: 70vh;
+
+  }
+}
+
+@media (min-width: 1225px) {
+
+    /* Parallax Jumbotron */
+    #subtext {
+      padding-top: 10vh;
+      text-align: center;
+      font-size: 9rem;
+    }
+    #text {
+      position: absolute;
+      color: white;
+      font-size: 9rem;
+      font-weight: 700;
+      padding-top: 70vh;
+
+    }
+  /* Turtle Cutout - Facts Section */
+  .turtle_cutout {
+    padding-top: 5%;
+    overflow-x: hidden;
+  }
+  
+  .turtle_cutout img {
+    position: absolute;
+    width: 65%;
+    object-fit: contain;
+    overflow-x: hidden;
+    left: -300px;
+  }
+}
+
+@media (min-width: 1440px) {
+
+     /* Parallax Jumbotron */
+     #subtext {
+      padding-top: 10vh;
+
+      font-size: 9rem;
+    }
+    #text {
+      position: absolute;
+      color: white;
+      font-size: 9rem;
+      font-weight: 700;
+      padding-top: 70vh;
+      text-align: center;
+    }
+  /* Turtle Cutout - Facts Section */
+  .turtle_cutout {
+    padding-top: 5%;
+    overflow-x: hidden;
+  }
+  
+  .turtle_cutout img {
+    position: absolute;
+    width: 60%;
+    object-fit: contain;
+    overflow-x: hidden;
+    left: -300px;
+  }
+}
+

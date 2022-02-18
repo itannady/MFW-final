@@ -1,0 +1,302 @@
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: poppins;
+  color: #1f1f1f;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* Navbar */
+nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100000;
+  font-weight: bold;
+}
+
+.logo {
+  font-family: poppins;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.nav-link {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Hero Image */
+
+.hero {
+  position: relative;
+  width: 100vw;
+  height: 60vh;
+  background: linear-gradient(
+      to bottom,
+      rgba(61, 61, 65, 0.185),
+      rgba(61, 58, 58, 0.26)
+    ),
+    url(../img/contact-hero.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero-text {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-text h1 {
+  position: absolute;
+  font-weight: bold;
+  font-size: 6rem;
+  color: white;
+}
+
+/* Contact Header */
+
+.contact-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+h2 {
+  padding-top: 20%;
+  display: flex;
+  justify-content: center;
+  font-family: abril fatface;
+  font-size: 2rem;
+  letter-spacing: 0.25%;
+}
+
+.contact-header p {
+  padding-bottom: 5%;
+  text-align: center;
+}
+
+.left-container {
+  margin: 4%;
+}
+
+
+.btn-format {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.mainbtn {
+  padding-left: 15px;
+  padding-right: 15px;
+
+  background-color: transparent;
+  border: #1f1f1f solid 5px;
+  font-weight: bold;
+}
+
+.mainbtn:hover {
+  pointer: cursor;
+  background-color: black;
+  color: white;
+}
+
+.right-container {
+    margin: 4%;
+    padding-top: 8%;
+
+    display: flex;
+    flex-flow: column;
+    
+}
+
+/* Address section */
+
+.icon-text-wrapper {
+    display: flex;
+    margin-bottom: 5%;
+
+}
+
+.icon-text-wrapper svg {
+    padding-right: 2%;
+}
+
+.icon-text-wrapper i {
+    font-size: 2rem;
+    padding-right: 2%; 
+}
+
+.icon-text-wrapper a {
+    text-decoration: none;
+    color: #1f1f1f;
+}
+
+.icon-text-wrapper a:hover {
+    text-decoration: underline;
+    color: #1f1f1f;
+}
+
+address {
+  font-family: poppins;
+  font-style: normal;
+  font-weight: bold;
+}
+
+/* Footer */
+footer {
+  background-color: #1f1f1f;
+  margin-top: 10%;
+}
+
+.col-wrapper {
+  display: flex;
+  justify-content: space-around;
+  margin: 2%;
+  padding-top: 5%;
+}
+
+footer ul {
+  padding-left: 0;
+  padding-top: 2%;
+  list-style-type: none;
+}
+
+footer a {
+  text-decoration: none;
+  color: white;
+}
+
+footer a:hover {
+  text-decoration: underline;
+  color: white;
+}
+
+footer h5 {
+  font-family: abril fatface;
+  font-size: 1.5rem;
+  color: white;
+}
+
+footer label {
+  padding-top: 5%;
+  color: white;
+}
+
+input {
+  width: 300px;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #ffff;
+}
+
+.submit-btn {
+  background-color: transparent;
+  border: none;
+  font-size: 1.5rem;
+  transition: transform 0.2s;
+  color: white;
+}
+
+.submit-btn:hover {
+  cursor: pointer;
+  transform: scale(1.5);
+}
+
+.copyright {
+  padding-right: 3%;
+  display: flex;
+  align-items: flex-end;
+  font-size: 10px;
+  color: white;
+}
+
+.social-icons i {
+  font-size: 2rem;
+  padding: 3px;
+  color: white;
+}
+
+.bottom-wrapper {
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 2%;
+}
+
+/* Media Queries */
+@media (max-width: 480px) {
+  /* Navbar */
+  .navbar {
+    margin: 5%;
+  }
+
+  /* Footer */
+
+  .col-wrapper {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    margin: 2%;
+    padding-top: 5%;
+  }
+  .left-col {
+    padding-bottom: 5%;
+    padding-top: 5%;
+  }
+  .right-col {
+    padding-bottom: 5%;
+  }
+}
+
+@media (max-width: 780px) {
+  /* Navbar */
+  .dropdown-menu {
+    margin-left: 80%;
+  }
+}
+
+@media (max-width: 800px) {
+  /* Navbar */
+  .dropdown-menu {
+    margin-left: 80%;
+  }
+
+  /* Send Message Header */
+  h2 {
+    padding-top: 20%;
+    display: flex;
+    justify-content: center;
+    font-family: abril fatface;
+    font-size: 2rem;
+    letter-spacing: 0.25%;
+  }
+  
+  .contact-header p {
+    padding-bottom: 5%;
+    text-align: left;
+  }
+  
+}
+
+@media (max-width: 1210px) {
+/* Address Column */
+.right-container {
+  margin: 4%;
+  padding-top: 10%;
+ 
+  
+}
+
+
+}

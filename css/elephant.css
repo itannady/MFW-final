@@ -4,9 +4,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
   font-family: poppins;
   color: white;
-  scroll-behavior: smooth;
 }
 
 body {
@@ -20,6 +20,18 @@ nav {
   left: 0;
   width: 100%;
   z-index: 100000;
+  font-weight: bold;
+}
+
+.logo {
+  font-family: poppins;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.nav-link {
+  display: flex;
+  justify-content: flex-end;
 }
 
 /* Jumbotron */
@@ -55,26 +67,24 @@ nav {
 
 #subtext {
   position: absolute;
-  color: white;
   font-size: 5rem;
   font-weight: 700;
   padding-top: 10vh;
   text-align: center;
-  white-space: nowrap;
 }
 
 #text {
   position: absolute;
-  color: white;
   font-size: 9rem;
   font-weight: 700;
   padding-top: 70vh;
+  text-align: center;
 }
 
 /* Facts Section */
-
 .info {
   position: relative;
+  display: flex;
   background: rgb(149, 84, 33);
   background: linear-gradient(
     180deg,
@@ -83,66 +93,51 @@ nav {
     rgba(144, 129, 118, 1) 19%,
     rgba(143, 143, 143, 1) 33%
   );
-  height: 110vh;
-  display: flex;
 }
 
 .text-container {
   padding-left: 8%;
   padding-top: 10%;
+  width: 50%;
 }
 
 h2 {
   font-family: abril fatface;
   font-size: 4rem;
+  padding-bottom: 2%;
 }
 
-.info h3 {
+.text-container h3 {
   font-weight: 200;
   font-size: 1.5rem;
-  line-height: 0.5;
 }
 
-.info p {
-  line-height: 1.6;
+.stats {
+  display: flex;
 }
 
-.stats h6 {
+h6 {
   font-family: abril fatface;
 }
 
+.stats-col {
+  margin-top: 3%;
+  margin-right: 20%;
+}
+
 .elephant_cutout {
-  width: 80%;
-  height: 100%;
-
-
-  background-repeat: no-repeat;
-  background-size: cover;
+  padding-top: 5%;
   overflow-x: hidden;
- 
 }
 
 .elephant_cutout img {
   position: absolute;
-  height: 100%;
-  animation: 10s slidein infinite;
-}
-
-@keyframes slidein {
-  0% {
-    right: -10%;
-  }
-  50% {
-    right: 0%;
-  }
-
-  100% {
-    right: -10%;
-  }
+  width: 70%;
+  object-fit: contain;
+  overflow-x: hidden;
 }
 
 /* Threats Section */
-
 .threats {
   position: relative;
   background: rgb(141, 141, 141);
@@ -156,7 +151,6 @@ h2 {
     rgb(14, 14, 14) 90%,
     rgba(6, 6, 6, 1) 97%
   );
-  height: 130vh;
 }
 
 .threats-text-container {
@@ -172,15 +166,18 @@ h2 {
   line-height: 1.6;
 }
 
+.card-container {
+  padding-bottom: 8%;
+}
+
 .card {
+  position: relative;
   width: 300px;
   height: 400px;
+  display: flex;
   background: none;
-  position: relative;
   border-radius: 20px;
   border: none;
-  display: flex;
-  /* box-shadow: 0 0 20px rgba(0,0,0,0.123); */
 }
 
 .card img {
@@ -196,12 +193,11 @@ h2 {
   bottom: 0;
   height: 50px;
   padding: 0.4em 1.5em;
-  font-size: 16px;
-  background: rgba(255, 255, 255, 0);
+  background: rgba(48, 38, 38, 0.377);
   backdrop-filter: blur(10px);
   border-radius: 10px;
+  font-size: 16px;
   transform: scale(1);
-  color: white;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.144);
   overflow: hidden;
   transition: all 0.4s;
@@ -209,10 +205,11 @@ h2 {
 
 .content p {
   font-size: 0.8em;
+  line-height: 1.6;
 }
 
 .card:hover .content {
-  height: 150px;
+  height: 200px;
 }
 
 .card h4 {
@@ -220,14 +217,12 @@ h2 {
 }
 
 /* Video */
-
 .overlay {
   position: relative;
   width: 100%;
 }
 
 video {
-
   width: 100vw;
   height: 45vh;
   object-fit: cover;
@@ -238,41 +233,55 @@ video {
   position: absolute;
   width: 100%;
   height: 100px;
-  background: linear-gradient(to bottom, #060606, transparent);
-  z-index: 1000;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
+  background: linear-gradient(to bottom, #060606, transparent);
+  z-index: 1000;
 }
 
 /* What We Can Do Section */
-
 .action-plan h2 {
   padding-top: 8%;
   padding-bottom: 5%;
-  font-family: abril fatface;
-  color: #1f1f1f;
   width: 100%;
   text-align: center;
+  font-family: abril fatface;
+  color: #1f1f1f;
+  font-size: 4rem;
 }
 
-.action-plan p {
-  color: black;
-}
-
-.carousel-container {
-  width: 100%;
+.action-plan {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .carousel {
-  width: 900px;
+  width: 80%;
 }
 
-.carousel-caption p {
-  color: white;
+.carousel-caption {
+  z-index: 2;
+  text-align: left;
+}
+
+.carousel-overlay::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 180px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: black;
+  opacity: 0.5;
+  z-index: 1;
+}
+
+h5 {
+  font-family: abril fatface;
 }
 
 /* Footer */
@@ -281,23 +290,26 @@ footer {
   margin-top: 10%;
 }
 
-.left-col {
-  margin: 5%;
-  padding-left: 20%;
-  width: 50%;
-}
-
-.right-col {
-  margin: 5%;
-  padding-right: 10%;
+.col-wrapper {
+  display: flex;
+  justify-content: space-around;
+  margin: 2%;
+  padding-top: 5%;
 }
 
 footer ul {
+  padding-left: 0;
+  padding-top: 2%;
   list-style-type: none;
 }
 
 footer a {
   text-decoration: none;
+  color: white;
+}
+
+footer a:hover {
+  text-decoration: underline;
   color: white;
 }
 
@@ -307,13 +319,14 @@ footer h5 {
 }
 
 footer label {
-  padding-top: 2%;
+  padding-top: 5%;
 }
+
 input {
+  width: 300px;
   background: transparent;
   border: none;
   border-bottom: 2px solid #ffff;
-  width: 300px;
 }
 
 .submit-btn {
@@ -329,55 +342,107 @@ input {
 }
 
 .copyright {
+  padding-right: 3%;
+  display: flex;
+  align-items: flex-end;
   font-size: 10px;
-  width: 100%;
-  text-align: center;
+}
+
+.social-icons i {
+  font-size: 2rem;
+  padding: 3px;
+}
+
+.bottom-wrapper {
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 2%;
 }
 
 /* Media Queries */
-
 @media (max-width: 480px) {
+  /* Navbar */
+  .navbar {
+    margin: 5%;
+  }
+  /* Parallax Jumbotron */
   #subtext {
     padding-top: 10vh;
     text-align: center;
-    font-size: 1rem;
-   
+    font-size: 3rem;
   }
-
   #text {
     position: absolute;
     color: white;
-    font-size: 5rem;
+    font-size: 4rem;
     font-weight: 700;
     padding-top: 70vh;
   }
-
-  
-.elephant_cutout img {
-  position: absolute;
-  height: 100%;
-  animation: 10s slidein infinite;
-}
-
-@keyframes slidein {
-  0% {
-    right: -70%;
+  /* Facts  */
+  .elephant_cutout img {
+    padding-top: 50%;
+    overflow-x: hidden;
   }
-  50% {
-    right: -40%;
+  /* Threats */
+  .card {
+    margin-bottom: 8%;
   }
 
-  100% {
-    right: -70%;
+  /* Footer */
+  .col-wrapper {
+    display: flex;
+    flex-direction: column;
   }
-}
-
-}
-
-@media (max-width: 768px) {
   .left-col {
-    padding-left: 0%;
+    padding-bottom: 5%;
+    padding-top: 5%;
   }
+  .right-col {
+    padding-bottom: 5%;
+  }
+}
 
-  
+@media (max-width: 780px) {
+  /* Navbar */
+  .dropdown-menu {
+    margin-left: 80%;
+  }
+  /* Parallax Jumbotron */
+  #subtext {
+    padding-top: 10vh;
+    text-align: center;
+    font-size: 4rem;
+  }
+  #text {
+    position: absolute;
+    color: white;
+    font-size: 8rem;
+    font-weight: 700;
+    padding-top: 70vh;
+  }
+  /* Facts */
+  .elephant_cutout img {
+    padding-top: 10%;
+    width: 80%;
+  }
+  /* Threats */
+  .threats-text-container p {
+    width: 60%;
+    line-height: 1.6;
+  }
+  .card {
+    margin-bottom: 5%;
+  }
+}
+
+@media (max-width: 990px) {
+  /* Navbar */
+  .dropdown-menu {
+    margin-left: 80%;
+  }
+  /* Threats */
+  .card {
+    margin-right: 1%;
+    margin-bottom: 3%;
+  }
 }
