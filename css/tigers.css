@@ -224,7 +224,6 @@ video {
   width: 100vw;
   height: 45vh;
   object-fit: cover;
-
 }
 
 .overlay::before {
@@ -358,10 +357,7 @@ input {
   padding-bottom: 2%;
 }
 
-
-
 /* Media Queries */
-
 
 @media (max-width: 480px) {
   /* Navbar */
@@ -369,22 +365,20 @@ input {
     margin: 5%;
   }
   /* Parallax Jumbotron */
-  #subtext {
-    padding-top: 10vh;
-    text-align: center;
-    font-size: 3rem;
-  }
+
   #text {
     position: absolute;
     color: white;
-    font-size: 4rem;
+    font-size: 5rem;
     font-weight: 700;
-    padding-top: 70vh;
+    padding-top: 10vh;
   }
+
   /* Facts  */
   .tiger_cutout img {
     padding-top: 50%;
     overflow-x: hidden;
+    left: -130px;
   }
   /* Threats */
   .card {
@@ -404,28 +398,36 @@ input {
   }
 }
 
+
+
 @media (max-width: 780px) {
   /* Navbar */
   .dropdown-menu {
     margin-left: 80%;
   }
   /* Parallax Jumbotron */
-  #subtext {
-    padding-top: 10vh;
-    text-align: center;
-    font-size: 4rem;
-  }
   #text {
-    position: absolute;
-    color: white;
-    font-size: 8rem;
-    font-weight: 700;
-    padding-top: 70vh;
+    padding-top: 10vh;
   }
-  /* Facts */
+
+  /* Tiger Cutout - Facts Section */
+  .tiger_cutout {
+    padding-top: 10%;
+    overflow-x: hidden;
+  }
+
+  .tiger_cutout img {
+    position: absolute;
+    width: 50%;
+    object-fit: contain;
+    overflow-x: hidden;
+    left: -100;
+  }
+
   .tiger_cutout img {
     padding-top: 10%;
-    width: 80%;
+    width: 65%;
+    left: -130px;
   }
   /* Threats */
   .threats-text-container p {
@@ -447,6 +449,19 @@ input {
     margin-right: 1%;
     margin-bottom: 3%;
   }
+  /* Tiger Cutout - Facts Section */
+  .tiger_cutout {
+    padding-top: 15%;
+    overflow-x: hidden;
+  }
+
+  .tiger_cutout img {
+    position: absolute;
+    width: 60%;
+    object-fit: contain;
+    overflow-x: hidden;
+    left: -100;
+  }
 }
 
 @media (min-width: 1285px) {
@@ -455,29 +470,28 @@ input {
     padding-top: 5%;
     overflow-x: hidden;
   }
-  
+
   .tiger_cutout img {
     position: absolute;
     width: 50%;
     object-fit: contain;
     overflow-x: hidden;
     left: -100;
-}
-
-@media (min-width: 1400px) {
-  /* Turtle Cutout - Facts Section */
-  .tiger_cutout {
-    padding-top: 5%;
-    overflow-x: hidden;
   }
-  
-  .tiger_cutout img {
-    position: absolute;
-    width: 45%;
-    object-fit: contain;
-    overflow-x: hidden;
-    left: -100px;
-  }
-}
 
+  @media (min-width: 1400px) {
+    /* Turtle Cutout - Facts Section */
+    .tiger_cutout {
+      padding-top: 5%;
+      overflow-x: hidden;
+    }
+
+    .tiger_cutout img {
+      position: absolute;
+      width: 45%;
+      object-fit: contain;
+      overflow-x: hidden;
+      left: -100px;
+    }
+  }
 }
