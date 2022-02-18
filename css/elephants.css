@@ -360,6 +360,9 @@ input {
 }
 
 /* Media Queries */
+
+
+
 @media (max-width: 480px) {
   /* Navbar */
   .navbar {

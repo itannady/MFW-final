@@ -328,6 +328,25 @@ input {
 
  /* Footer */
 
+ @media (max-width: 390px) {
+  .col-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-top: 5%;
+  }
+  
+ .left-col {
+  padding-bottom: 5%;
+  padding-top: 5%;
+}
+.right-col {
+  padding-bottom: 5%;
+}
+
+
+}
+
  @media (max-width: 500px) {
   .col-wrapper {
     display: flex;

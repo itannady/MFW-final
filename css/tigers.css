@@ -358,7 +358,50 @@ input {
   padding-bottom: 2%;
 }
 
+
+
 /* Media Queries */
+
+@media (min-width: 390px) {
+  /* Navbar */
+  .navbar {
+    margin: 5%;
+  }
+  /* Parallax Jumbotron */
+  
+  #text {
+    position: absolute;
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+   
+  }
+  /* Facts  */
+  .tiger_cutout img {
+    padding-top: 50%;
+    overflow-x: hidden;
+    left: -230px;
+  }
+
+  
+  /* Threats */
+  .card {
+    margin-bottom: 8%;
+  }
+  .col-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  /* Footer */
+  .left-col {
+    padding-bottom: 5%;
+    padding-top: 5%;
+  }
+  .right-col {
+    padding-bottom: 5%;
+  }
+}
+
 @media (max-width: 480px) {
   /* Navbar */
   .navbar {
@@ -378,7 +421,7 @@ input {
     padding-top: 70vh;
   }
   /* Facts  */
-  .elephant_cutout img {
+  .tiger_cutout img {
     padding-top: 50%;
     overflow-x: hidden;
   }
@@ -419,7 +462,7 @@ input {
     padding-top: 70vh;
   }
   /* Facts */
-  .elephant_cutout img {
+  .tiger_cutout img {
     padding-top: 10%;
     width: 80%;
   }
